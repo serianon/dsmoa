@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '24.0.0 rc4'
+    defaultConfig {
+        applicationId "de.hsrm.derns002.dsmoa.service"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode getGitCommitCount()
+        versionName "git-" + getGitCommitShortHash() + " at " + getMyDate() + " (MultiDex)"
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile project(':Lib')
+    compile 'com.karumi:dexter:2.2.2'
+    compile files('libs/java-cup-11b-runtime-2015.03.26.jar')
+    compile files('libs/moa-2014.05-SNAPSHOT-sources.jar')
+    compile files('libs/moa-2014.05-SNAPSHOT.jar')
+    compile files('libs/pentaho-package-manager-1.0.11.jar')
+    compile files('libs/sizeofag-1.0.0.jar')
+    compile files('libs/weka-dev-3.7.13.jar')
+    compile files('libs/weka-package-2014.05-SNAPSHOT.jar')
+    compile files('libs/eventbus-3.0.0.jar')
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.google.android.gms:play-services:9.0.2'
+}
