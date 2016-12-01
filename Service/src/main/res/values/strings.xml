@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DSMoA Service-Monitor</string>
+    <string name="title_activity_maps">Cluster-Monitor</string>
+
+    <string name="pref_dsmnotrunning">The DsmService is not running yet. Touch to start the service</string>
+    <string name="pref_dsmrunning">The DsmService is already running in background</string>
+    <string name="dialog_resetmodel">Do you really want to reset the model in memory and storage?</string>
+    <string name="snack_err_servicenotrunning">Couldn\'t dispatch event - is the service running?</string>
+
+    <string name="menu_action_center_on_macroclusters">Center on macroclusters</string>
+
+    <string name="clustream">CluStream with k-means 1</string>
+    <string name="withkmeans">CluStream with k-means 2</string>
+    <string name="mywithkmeans">CluStream with k-means 2 (fixed)</string>
+    <string name="clustree">ClusTree</string>
+    <string name="cobweb">CobWeb</string>
+    <string name="withdbscan">DenStream with DBScan</string>
+    <string name="mywithdbscan">DenStream with DBScan (fixed)</string>
+    <string name="streamkmeans">Stream k-means</string>
+
+
+
+</resources>

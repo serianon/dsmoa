@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/serian/Dokumente/HS RheinMain/Sync/Module/Thesis/dsmoa/Android/Lib/build/intermediates/res/merged/release/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/home/serian/Dokumente/HS RheinMain/Sync/Module/Thesis/dsmoa/Android/Lib/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/serian/GitHub/dsmoa/Lib/build/intermediates/res/merged/release/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/home/serian/GitHub/dsmoa/Lib/build/intermediates/exploded-aar/com.android.support/design/23.3.0/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+    }
+]

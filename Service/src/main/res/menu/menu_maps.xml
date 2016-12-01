@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="de.hsrm.coma.gui.MainActivity">
+
+    <item
+        android:id="@+id/action_center_on_macroclusters"
+        android:icon="@drawable/ic_bubble_chart_white_48dp"
+        android:orderInCategory="10"
+        android:title="@string/menu_action_center_on_macroclusters"
+        app:showAsAction="ifRoom" />
+
+</menu>

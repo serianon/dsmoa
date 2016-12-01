@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="General">
+
+        <de.hsrm.derns002.dsmoa.service.preferences.StartServicePreference
+            android:defaultValue="false"
+            android:key="dsmrunning"
+            android:summary="@string/pref_dsmnotrunning"
+            android:title="Start DsmService" />
+
+        <ListPreference
+            android:defaultValue="Coarse"
+            android:entries="@array/accuracy"
+            android:entryValues="@array/accuracy"
+            android:key="trackingaccuracy"
+            android:summary="Set the accuracy for the location-tracking"
+            android:title="Tracking accuracy" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="DSM settings">
+
+        <PreferenceScreen
+            android:summary="Basic settings for the clustering process"
+            android:title="Cluster">
+
+            <ListPreference
+                android:defaultValue="0"
+                android:entries="@array/clustererAlgo"
+                android:entryValues="@array/clustererAlgoValues"
+                android:key="clusteralgo"
+                android:summary="Choose the configuration for the clustering"
+                android:title="Clusterer algorithms" />
+
+            <PreferenceScreen
+                android:summary="Visualizes the current clusters in Google Maps"
+                android:title="Show clusters">
+                <intent android:action="de.hsrm.derns002.dsmoa.service.MapsActivity" />
+            </PreferenceScreen>
+
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="traincluster"
+                android:summary="Trains the cluster-model with every new location. If turned off, the cluster-model won't progress any more"
+                android:title="Train clusters" />
+
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="persistcluster"
+                android:summary="Persists the cluster-model to storage after each training-iteration. The model is always being reloaded upon restarting the service. If turned off, the clustering will start from scratch each time the service restarts"
+                android:title="Persist clusters" />
+
+            <de.hsrm.derns002.dsmoa.service.preferences.DsmCommandPreference
+                android:summary="Deletes all current cluster-information and starts from scratch"
+                android:title="Reset clusters" />
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:enabled="false"
+            android:summary="Not yet implemented"
+            android:title="Decision trees" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Debug functions">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="debugmode"
+            android:summary="Enables debug-functions and disables the live-DSM"
+            android:title="Debug-mode" />
+
+        <PreferenceScreen
+            android:summary="Set up and trigger callbacks from this service to the listeners/apps"
+            android:title="Trigger callbacks">
+
+            <ListPreference
+                android:defaultValue="Home"
+                android:dependency="debugmode"
+                android:entries="@array/labels"
+                android:entryValues="@array/labelValues"
+                android:key="label"
+                android:summary="The test-label to be triggered"
+                android:title="Label" />
+
+            <EditTextPreference
+                android:defaultValue="42"
+                android:dependency="debugmode"
+                android:inputType="number"
+                android:key="clusternumber"
+                android:summary="The test-cluster-number to be triggered"
+                android:title="Cluster number" />
+
+            <EditTextPreference
+                android:defaultValue="3000"
+                android:dependency="debugmode"
+                android:inputType="number"
+                android:key="delay"
+                android:summary="The time waited until triggering a callback in milliseconds"
+                android:title="Delay" />
+
+            <ListPreference
+                android:defaultValue="0"
+                android:dependency="debugmode"
+                android:entries="@array/callbacks"
+                android:entryValues="@array/callbackValues"
+                android:key="method"
+                android:summary="The method to be triggered"
+                android:title="Method" />
+
+            <de.hsrm.derns002.dsmoa.service.preferences.CallbackTriggerPreference
+                android:dependency="debugmode"
+                android:key="trigger"
+                android:summary="Triggers the method defined above"
+                android:title="Callback-trigger" />
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:summary="Test MOA-functions in a dry run"
+            android:title="MOA tests">
+
+            <de.hsrm.derns002.dsmoa.service.preferences.HoeffdingTreeTestPreference
+                android:defaultValue="10000"
+                android:dependency="debugmode"
+                android:inputType="number"
+                android:persistent="false"
+                android:summary="Run generated data against MOAs hoeffding-tree implementation"
+                android:title="Test hoeffding-tree" />
+
+            <de.hsrm.derns002.dsmoa.service.preferences.CobWebTestPreference
+                android:defaultValue="1000"
+                android:dependency="debugmode"
+                android:inputType="number"
+                android:persistent="false"
+                android:summary="Run generated data against MOAs cobweb implementation. Needs debug-mode to be activated"
+                android:title="Test cobweb" />
+
+            <de.hsrm.derns002.dsmoa.service.preferences.MyWithDbScanTestPreference
+                android:defaultValue="1000"
+                android:dependency="debugmode"
+                android:inputType="number"
+                android:persistent="false"
+                android:summary="Run generated data against MOAs denstream+DBScan implementation. Needs debug-mode to be activated"
+                android:title="Test denstream with DBScan" />
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Version">
+
+        <de.hsrm.derns002.dsmoa.service.preferences.VersionNamePreference android:title="Version name" />
+
+        <de.hsrm.derns002.dsmoa.service.preferences.VersionCodePreference android:title="Version code" />
+
+        <!-- manifest-version-info in Lib module gets lost on compile-time, so this wont work-->
+        <!--<de.hsrm.derns002.dsmoa.lib.ApiCodePreference android:title="IPC API Version" />-->
+        <!-- manually setting IPC API version here instead -->
+        <Preference
+            android:summary="4"
+            android:title="IPC API version" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

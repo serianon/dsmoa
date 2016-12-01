@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="accuracy">
+        <item>Coarse</item>
+        <item>Fine</item>
+        <item>Debug</item>
+    </string-array>
+
+    <string-array name="labels">
+        <item>Home</item>
+        <item>Work</item>
+    </string-array>
+
+    <string-array name="labelValues">
+        <item>Home</item>
+        <item>Work</item>
+    </string-array>
+
+    <string-array name="callbacks">
+        <item>onLabeledClusterEnter</item>
+        <item>onLabeledClusterExit</item>
+        <item>onUnlabeledClusterEnter</item>
+        <item>onUnlabeledClusterExit</item>
+        <item>onPredictionChange</item>
+    </string-array>
+
+    <string-array name="callbackValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <!-- corresponding to clustererAlgoValues, first should be the recommended algorithm -->
+    <string-array name="clustererAlgo">
+        <item>@string/mywithdbscan</item>
+        <item>@string/mywithkmeans</item>
+        <item>@string/cobweb</item>
+        <item>@string/clustree</item>
+    </string-array>
+
+    <!-- see LocationMiner.java for usage, 0 depicts the most recommended algorithm -->
+    <string-array name="clustererAlgoValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+</resources>
