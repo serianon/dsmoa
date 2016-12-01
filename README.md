@@ -2,7 +2,7 @@
 
 Data-Stream-Mining on Android (DSMoA) is a student-project. The goal is to make [Data-Stream-Mining](https://en.wikipedia.org/wiki/Data_stream_mining) available on Android (duh).
 
-![DSM-Service-Monitor](https://github.com/serianon/dsmoa/blob/master/Screenshots/svc_main_a.png "DSM-Service-Monitor")
+![DSM-Service-Monitor](https://github.com/serianon/dsmoa/blob/screenshots-readme/Screenshots/svc_main_a.png "DSM-Service-Monitor")
 
 # State and scope of DSMoA
 
