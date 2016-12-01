@@ -23,4 +23,4 @@ I made this code public; maybe someone is interested in bringing this project to
 
 # Screenshots
 
-See [here](https://github.com/serianon/dsmoa/blob/screenshots-readme/Screenshots/svc_main_a.png), [here](https://github.com/serianon/dsmoa/blob/screenshots-readme/Screenshots/svc_clustermon_cluster_a.png) and [here](https://github.com/serianon/dsmoa/blob/screenshots-readme/Screenshots/app_sample_a.png).
+See [here](https://github.com/serianon/dsmoa/blob/master/Screenshots/svc_main_a.png), [here](https://github.com/serianon/dsmoa/blob/master/Screenshots/svc_clustermon_cluster_a.png) and [here](https://github.com/serianon/dsmoa/blob/master/Screenshots/app_sample_a.png).
