@@ -20,3 +20,7 @@ First of all, I never managed to get as far as I really wished I could. I'd espe
 * Evaluation: Is DSM suitable for machine-learning on the device only? How is the energy consumption and the quality of the models? Is it useful? Can it replace Client-Server structure and therefore improve privacy?
 
 I made this code public; maybe someone is interested in bringing this project to the next level. But most of all, I wanted to share what I could find out especially when it comes to IPC with AIDL and MOA's Android-port, because these two topics included figuring out a lot of things by myself, since the documentation and examples I could find online were just not very useful. If there is someone out there struggeling with one of these topics, I'm glad to show you some of my results. Happy Coding!
+
+# Screenshots
+
+See [here](https://github.com/serianon/dsmoa/blob/master/Screenshots/svc_main_a.png), [here](https://github.com/serianon/dsmoa/blob/master/Screenshots/svc_clustermon_cluster_a.png) and [here](https://github.com/serianon/dsmoa/blob/master/Screenshots/app_sample_a.png).
