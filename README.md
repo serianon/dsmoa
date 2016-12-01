@@ -2,10 +2,6 @@
 
 Data-Stream-Mining on Android (DSMoA) is a student-project. The goal is to make [Data-Stream-Mining](https://en.wikipedia.org/wiki/Data_stream_mining) available on Android (duh).
 
-# Screenshots
-
-See [here](https://github.com/serianon/dsmoa/blob/screenshots-readme/Screenshots/svc_main_a.png)
-
 # State and scope of DSMoA
 
 Please keep in mind that this project is a mere first step into that topic. I managed to build an android-service that runs in the background and provides Data-Stream-Mining-algorithms for other apps, called "DSM-Service". You can think of this DSM-Service as somewhat similar to the Google Play Services. Apps can connect to this service and register for updates. The service delivers new information to the apps (observer-pattern). For the communication I use Androids IPC with AIDL.
@@ -24,3 +20,7 @@ First of all, I never managed to get as far as I really wished I could. I'd espe
 * Evaluation: Is DSM suitable for machine-learning on the device only? How is the energy consumption and the quality of the models? Is it useful? Can it replace Client-Server structure and therefore improve privacy?
 
 I made this code public; maybe someone is interested in bringing this project to the next level. But most of all, I wanted to share what I could find out especially when it comes to IPC with AIDL and MOA's Android-port, because these two topics included figuring out a lot of things by myself, since the documentation and examples I could find online were just not very useful. If there is someone out there struggeling with one of these topics, I'm glad to show you some of my results. Happy Coding!
+
+# Screenshots
+
+See [here](https://github.com/serianon/dsmoa/blob/screenshots-readme/Screenshots/svc_main_a.png), [here](https://github.com/serianon/dsmoa/blob/screenshots-readme/Screenshots/svc_clustermon_cluster_a.png) and [here](https://github.com/serianon/dsmoa/blob/screenshots-readme/Screenshots/app_sample_a.png).
