@@ -1,3 +1,7 @@
+# Deprecation
+
+This is vastly deprecated now. Try using TensorFlow ;)
+
 # What is DSMoA
 
 Data-Stream-Mining on Android (DSMoA) is a student-project. The goal is to make [Data-Stream-Mining](https://en.wikipedia.org/wiki/Data_stream_mining) available on Android (duh).
